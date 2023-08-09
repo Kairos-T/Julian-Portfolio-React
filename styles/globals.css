@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+main {
+  /* Default styles for larger screens */
+  font-size: 16px;
+  line-height: 1.6;
+  padding-top: 100px; /* Add some top padding for the navigation bar */
+  padding-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    /* Adjust the styles for smaller screens (e.g., tablets and mobile devices) */
+    font-size: 14px;
+    line-height: 1.5;
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Adjust the styles for even smaller screens (e.g., smartphones) */
+    font-size: 12px;
+    line-height: 1.4;
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "burtons";
+  src: url("../public/Burtons.otf");
+}
+
+nav {
+  padding-left: 2em;
+  padding-right: 2em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  @media screen and (max-width: 768px) {
+    padding: 0.5em 1em;
+    font-size: 16px;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0.3em 0.8em;
+    font-size: 14px;
+  }
+}
+
+.logo {
+  width: 40vmin;
+  height: 40vmin;
+  margin-top: -1vmin;
+  margin-bottom: 1vmin;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.gif {
+  width: 60vmin;
+  height: 40vmin;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1vmin;
+  padding-bottom: 3vmin;
+  overflow: hidden;
+}
+
+.gif:hover {
+  transform: scale(1.05);
+}

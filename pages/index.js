@@ -57,11 +57,11 @@ export default function Home() {
               <strong>Julian Liaw</strong>
             </h2>
           </div>
-            <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 relative overflow-hidden mt-0 md:h-96 md:w-96 flex justify-center items-center">
-            <Image src={logo} className="logo" layout="fill" objectFit="cover" />
-            </div>
-          <div className="text-center p-10 py-10">
+          <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-32 h-32 md:w-80 md:h-80 relative overflow-hidden mt-0 flex justify-center items-center" style={{borderRadius: '50%'}}>
+            <Image src={logo} className="icon hover:scale-105" layout="fill" objectFit="cover" />
+          </div>
 
+          <div className="text-center p-10 py-10">
             <h3 className="text-2xl py-2 dark:text-white md:text-3xl">
               <strong>Student at National Junior College</strong>
             </h3>

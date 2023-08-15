@@ -35,6 +35,7 @@ main {
   }
 }
 
+
 a {
   color: inherit;
   text-decoration: none;
@@ -71,18 +72,45 @@ nav {
   }
 }
 
+
 .logo {
   width: 40vmin;
   height: 40vmin;
   margin-top: -1vmin;
   margin-bottom: 1vmin;
   object-fit: cover;
-  border-radius: 50%;
   overflow: hidden;
 }
 
 .logo:hover {
   transform: scale(1.05);
+}
+
+/* Small screens */
+@media (max-width: 640px) {
+  .bg-gradient-to-b {
+    width: calc(30vmin + 30px);
+    height: calc(30vmin + 30px);
+    margin-top: -5vmin;
+    margin-bottom: -1vmin;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .bg-gradient-to-b {
+    margin-top: -5vmin;
+    width: calc(30vmin + 30px);
+    height: calc(30vmin + 30px);
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .bg-gradient-to-b {
+    width: calc(30vmin + 10px);
+    height: calc(30vmin + 10px);
+  }
 }
 
 .gif {

@@ -21,19 +21,25 @@ import portrait_gif from "../public/profile.gif";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
+  const [iconColor, setIconColor] = useState('text-white');
+
+  const handleIconClick = () => {
+    setDarkMode(!darkMode);
+    setIconColor(darkMode ? 'text-white' : 'text-black');
+  };
+
 
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
-
         <title>Julian's Portfolio</title>
         <meta name="description" content="" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=" bg-white px-10 dark:bg-gray-900 md:px-20 lg:px-40">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between dark:text-white">
-            <h1 className="font-burtons text-xl">Julian Liaw</h1>
+        <nav className="py-10 mb-12 flex justify-between dark:text-white" style={{boxShadow: '0 2px 4px rgba(0, 0, 0, 0.2)'}}>            
+        <h1 className="font-burtons text-xl">Julian Liaw</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
@@ -44,8 +50,7 @@ export default function Home() {
               <li>
                 <a
                   className="bg-gradient-to-r from-cyan-500 text- to-teal-500 text-white px-4 py-2 border-none rounded-md ml-8"
-                  href="#"
-                >
+                  href="#"                >
                   Resume
                 </a>
               </li>
@@ -78,14 +83,12 @@ export default function Home() {
                 <AiFillYoutube />
               </button>
             </div>
-
             <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
             I've been an AEP student since 2018 (JH1). My specialty is in human character art!
             I have a deep passion for writing, art and music and pursue these in my free time.
               Recently, I have been trying to work on more detailed and unique character designs
               to tell vibrant and unique stories.
             </p>
-
           </div>
           <div>
             <h2 className="text-4xl py-2 text-teal-600 font-medium dark:text-green-400 md:text-6xl text-center">
@@ -96,10 +99,11 @@ export default function Home() {
                 "Portraying the intricacies in human relationships through 
                 visual and written art"</strong>
             </h3>
-            <div className="mx-auto bg-gradient-to-b py-5 from-teal-500 rounded-lg w-120 h-80 relative overflow-hidden mt-0 md:h-96 md:w-96 flex justify-center items-center">
+            <div className="larger mx-auto bg-gradient-to-b py-5 from-teal-500 rounded-lg w-120 h-80 relative overflow-hidden mt-0 md:h-96 md:w-96 flex justify-center items-center">
               <Image src={portrait_gif} className="gif" layout="fill" objectFit="cover"/>
             </div>
           </div>
+
           <h2 className="text-2xl py-5 text-blue-600 font-medium dark:text-blue-400 md:text-4xl text-center">
                 <strong>The Turntable</strong>
           </h2>

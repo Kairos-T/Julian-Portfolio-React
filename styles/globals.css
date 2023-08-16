@@ -80,6 +80,7 @@ nav {
   margin-bottom: 1vmin;
   object-fit: cover;
   overflow: hidden;
+
 }
 
 .logo:hover {
@@ -126,3 +127,13 @@ nav {
 .gif:hover {
   transform: scale(1.05);
 }
+
+@media screen and (max-width: 640px) {
+  .mx-auto {
+    margin-top: 0px;
+  }
+  .gif {
+    width: 80%;
+  }
+}
+
